@@ -1,0 +1,28 @@
+{
+  "name": "mamae-mcz",
+  "version": "1.0.0",
+  "description": "Website do Clube Mamãe Maceió",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RodrigoBastos/mamae-mcz.git"
+  },
+  "keywords": [
+    "Clube",
+    "Mamãe",
+    "em",
+    "Maceió"
+  ],
+  "author": "Rodrigo Bastos, Samuel das Chagas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RodrigoBastos/mamae-mcz/issues"
+  },
+  "homepage": "https://github.com/RodrigoBastos/mamae-mcz#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
