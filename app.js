@@ -4,12 +4,10 @@ var app = express();
 app.set("view engine", "jade");
 app.set("port", parseInt(process.env.PORT) || 5000);
 
-app.use(express.static('public'));
-app.set('views', './public/views');
+app.use(express.static('client/public'));
+app.set('views', './client/views');
 
 app.get("/", function (req, res) {
-  //res.send("Clube Mamãe em Maceió!");
-
   res.render("index");
 });
 
