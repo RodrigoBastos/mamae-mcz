@@ -50,12 +50,6 @@ gulp.task("build", function (done) {
   return runSequence("js", "css", done);
 });
 
-gulp.task("serve", function () {
-  return browserSync.init({ server: {
-    baseDir: './client/public'
-  } });
-});
-
 gulp.task("nodemon", function (cb) {
   var callbackCalled = false;
   return nodemon({script: "app.js"}).on("start", function () {
@@ -66,6 +60,15 @@ gulp.task("nodemon", function (cb) {
   });
 });
 
+gulp.task("browser-sync", function() {
+  browserSync.init(null, {
+    proxy: "http://localhost:5000",
+    baseDir: "./client/public",
+    browser: "google chrome",
+    port: 7000
+  });
+});
+
 gulp.task('reload', function () { return browserSync.reload(); });
 
-gulp.task("default", function (done) { runSequence("build", "serve", "nodemon", "watch", done); });
+gulp.task("default", function (done) { runSequence("build", "browser-sync", "nodemon", "watch", done); });
