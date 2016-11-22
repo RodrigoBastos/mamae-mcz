@@ -71,4 +71,7 @@ gulp.task("browser-sync", function() {
 
 gulp.task('reload', function () { return browserSync.reload(); });
 
-gulp.task("default", function (done) { runSequence("build", "browser-sync", "nodemon", "watch", done); });
+gulp.task("default", function (done) {
+  process.env.NODE_ENV = "development";
+  runSequence("build", "browser-sync", "nodemon", "watch", done);
+});
