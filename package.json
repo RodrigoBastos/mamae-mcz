@@ -24,7 +24,8 @@
   "homepage": "https://github.com/RodrigoBastos/mamae-mcz#readme",
   "dependencies": {
     "express": "^4.14.0",
-    "jade": "^1.11.0"
+    "jade": "^1.11.0",
+    "scrollreveal": "^3.3.2"
   },
   "devDependencies": {
     "browser-sync": "^2.17.6",

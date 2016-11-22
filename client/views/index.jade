@@ -3,12 +3,186 @@ html
       title Clube Mamãe em Maceió
       link(rel="icon", href="images/logo.png")
       link(rel="stylesheet", type="text/css", href="css/mamaemcz.min.css")
+      
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+      link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+      link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.carousel.min.css')
+      link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/assets/owl.theme.default.min.css')
+
    body
-      div#center
-         img(src="images/logo.png", width="200", height="200")
-         br
-         p Em breve será lançado o Clube Mamãe em Maceió!
-         p
-          | Siga o nosso instagram &nbsp;
-          a(href="https://www.instagram.com/mamaeemmaceio", target="_blank") @mamaeemmaceio
-          |  para maiores informações.
+      nav.navbar.navbar-default
+        .container
+          
+          .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='#') 
+              img(src="images/logo.png")
+          
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
+              li
+                a(href='#') O clube
+              li
+                a(href='#') Beneficiados
+              li
+                a(href='#') Parceiros
+              li
+                a(href='#') Associe-se
+              li
+                a(href='#') A História
+              li
+                a(href='#') Contato
+              li
+                a(href='#') Blog
+
+      //- #owl-demo.owl-carousel.owl-theme
+      //-   .item
+      //-     img(src='https://www.cursosiag.com.br/lms/common/site/imgs/banners/banner_academia.jpg', alt='The Last of us')
+      //-     div.container.slider-content
+      //-       div.col-lg-6
+      //-         h2
+      //-           | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae nam, aspernatur ipsam pariatur sint consequuntur, debitis, veritatis voluptates commodi molestiae consequatur veniam? Atque magnam repellendus laborum dignissimos suscipit et impedit.
+      //-       div.col-lg-6
+      //-         img(src="images/logo.png")
+
+      div.slider
+        div.container
+          div.col-lg-6
+            h1
+              |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque eius asperiores unde perferendis doloribus consequatur facilis!
+            button.btn-slider-cta
+              | Quero ser um associado
+          div.col-lg-6.text-center
+            a(href="#")
+              img(src="images/logo.png")
+            ul.social-links
+              li
+                a(href="https://www.instagram.com/mamaeemmaceio/", target="_blank")
+                  i.fa.fa-3x.fa-instagram(aria-hidden='true')
+                  span
+                    | @mamaeemmaceio
+
+      section.section.section-o-clube
+        .container
+          .row
+            .col-lg-4.text-center.foo
+              i.material-icons
+                | grade
+              h3
+                | Membro
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, reprehenderit.
+
+            .col-lg-4.text-center.foo
+              i.material-icons
+                | favorite_border
+              h3
+                | Parceiro
+              p
+                |  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae deserunt tempore repellendus, doloribus nisi animi similique nostrum qui excepturi non.
+
+            .col-lg-4.text-center.foo
+              i.material-icons
+                | account_balance
+              h3
+                | Beneficiados
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, reprehenderit.
+
+      section.section.section-beneficiados
+        .container
+          .row
+            .col-lg-12
+              h2.text-center
+                | Beneficiados
+              hr
+          .row.row-beneficiado
+            .col-lg-6
+              a(href="#")
+                img(src="images/lar-1.jpg", alt="")
+            .col-lg-6
+              h4
+                | ~ Lar São Domingos
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio fuga repellendus maiores aut at cupiditate error, quos hic, velit possimus dolorum, fugiat suscipit, animi deserunt fugit corporis. Quo at amet debitis possimus consectetur pariatur, ipsam quam praesentium soluta mollitia nihil, quae, cumque vero dolor ullam nulla explicabo! Ut, ea, totam!
+
+          .row.row-beneficiado
+            .col-lg-6
+              h4
+                | ~ Lar dos Idosos
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio fuga repellendus maiores aut at cupiditate error, quos hic, velit possimus dolorum, fugiat suscipit, animi deserunt fugit corporis. Quo at amet debitis possimus consectetur pariatur, ipsam quam praesentium soluta mollitia nihil, quae, cumque vero dolor ullam nulla explicabo! Ut, ea, totam!
+            .col-lg-6
+              a(href="#")
+                img(src="images/lar-1.jpg", alt="")
+          .row.text-center
+            button.btn-carregar-mais
+              | Ver mais
+
+      section.section.section-parceiros
+        .container
+          .row
+            .col-lg-12
+              h2.text-center
+                | Parceiros
+              hr
+
+              #owl-demo.owl-carousel.owl-theme
+                .item
+                  img(src="images/parceiro-1.png")
+                .item
+                  img(src="images/logo-1.jpg")
+                .item
+                  img(src="images/logo-2.jpg")
+                .item
+                  img(src="images/logo-3.jpg")
+                .item
+                  img(src="images/logo-4.jpg")
+                .item
+                  img(src="images/logo-5.jpg")
+              
+      section.section.section-associacao
+        .container
+          .row
+            .col-lg-6
+              ul
+                li
+                  | O clube
+                li
+                  | Beneficiados
+                li
+                  | Parceiros
+                li
+                  | Associe-se
+                li
+                  | A História
+                li
+                  | Contato
+                li
+                  | Blog
+            .col-lg-6
+              form(name="formAssociacao")
+                h3
+                  | Faça parte agora mesmo do Clube Mamãe em Maceió.
+                .form-group
+                  label
+                    | Nome
+                  input.form-control(type="text")
+                .form-group
+                  label
+                    | E-mail
+                  input.form-control(type="email")
+                button
+                  .btn
+                    | Associar agora
+          
+        script(src='https://code.jquery.com/jquery-3.1.1.min.js', integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=', crossorigin='anonymous')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.0/owl.carousel.min.js')
+        script(src='https://unpkg.com/scrollreveal@3.3.2/dist/scrollreveal.min.js')
+        script(src='https://use.fontawesome.com/2536e41b89.js')
+        script(src='js/mamaemcz.min.js')

@@ -1,16 +1,10 @@
-p {
-  color: #9875ae;
-  font-size: 20px;
-  font-weight: bold;
-}
+/* COLORS */
+$primary-color: #f15ab2;
+$primary-dark-color: #ce4a97;
+$secondary-color: #4991cd;
+$cta-color: #1abc9c;
+$cta-dark-color: #16a085;
 
-#center {
-  text-align: center;
-  width: 500px;
-  height: 500px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -250px;
-  margin-left: -250px;
-}
+$white: #fff;
+$gray: #ccc;
+$gray-lighten: #eee;
