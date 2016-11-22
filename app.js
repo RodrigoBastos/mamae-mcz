@@ -8,7 +8,10 @@ app.use(express.static('client/public'));
 app.set('views', './client/views');
 
 app.get("/", function (req, res) {
-  res.render("index");
+
+  if (process.env.NODE_ENV == "development") return res.render("index");
+
+  res.render("build");
 });
 
 app.listen(app.get("port"), function () {

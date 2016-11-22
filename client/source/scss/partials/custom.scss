@@ -63,13 +63,11 @@ h3 {
 }
 
 .slider {
-  background-image: url('../images/slider-bg.jpg');
   background-size: cover;
   height: 526px;
-  background-repeat: no-repeat;
   padding-top: 100px;
   background-position-y: -90px;
-  background-attachment: fixed;
+  background: url("../images/slider-bg.jpg") no-repeat fixed;
 
   h1 {
     color: $white;
@@ -186,5 +184,27 @@ h3 {
     background-color: $white;
     height: 400px;
     margin-top: 40px;
+  }
+}
+
+.build-container {
+
+  p {
+    color: #4991cd;
+    font-size: 20px;
+    font-weight: bold;
+
+    a {  color: #f15ab2;  }
+  }
+
+  #center {
+    text-align: center;
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -250px;
   }
 }
