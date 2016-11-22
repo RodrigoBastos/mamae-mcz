@@ -1,10 +1,190 @@
-/* COLORS */
-$primary-color: #f15ab2;
-$primary-dark-color: #ce4a97;
-$secondary-color: #4991cd;
-$cta-color: #1abc9c;
-$cta-dark-color: #16a085;
+@import "colors";
 
-$white: #fff;
-$gray: #ccc;
-$gray-lighten: #eee;
+body {
+  // font-family: 'Josefin Sans', sans-serif !important;
+  font-family: 'Raleway', sans-serif !important;
+}
+
+h1 {
+  font-size: 38px !important;
+  font-weight: 300 !important;
+}
+
+h3 {
+  font-family: 'Amatica SC', cursive !important;
+  font-weight: 700 !important;
+  font-size: 34px !important;
+}
+
+.btn-slider-cta {
+  border-radius: 0;
+  background-color: $cta-color;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+  padding: 20px 50px;
+  border: none;
+  border-bottom: 4px solid $cta-dark-color;
+  transition: .2s;
+
+  &:hover {
+    background-color: $cta-dark-color;
+  }
+}
+
+.btn-carregar-mais {
+  border-radius: 0;
+  background-color: $primary-color;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $white;
+  padding: 10px 50px;
+  border: none;
+  border-bottom: 4px solid $primary-dark-color;
+  transition: .2s;
+
+  &:hover {
+    background-color: $primary-dark-color;
+  }
+}
+
+.navbar-default {
+  background-color: #fff !important;
+  margin-bottom: 0 !important;
+}
+
+.navbar-brand {
+  padding: 10px !important;
+
+  img {
+    height: 30px;
+  }
+}
+
+.slider {
+  background-image: url('../images/slider-bg.jpg');
+  background-size: cover;
+  height: 526px;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  background-position-y: -90px;
+  background-attachment: fixed;
+
+  h1 {
+    color: $white;
+    margin-bottom: 40px;
+  }
+
+  h3 {
+    color: $white;
+  }
+
+  img {
+    margin-top: -80px;
+    margin-left: 20px;
+    height: 450px;
+  }
+
+  .social-links {
+    display: inline-block;
+    list-style: none;
+    margin: -30px 0 0;
+    padding-left: 100px;
+
+    li {
+      display: inline-block;
+
+      a {
+        span {
+          font-size: 18px;
+          margin: 5px;
+          position: relative;
+          top: -10px;
+        }
+      }
+    }
+  }
+}
+
+.section {
+  padding: 30px 0 50px;
+
+  h2 {
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+
+  hr {
+    width: 30px;
+    height: 3px;
+    background-color: $primary-color;
+    margin: 0 auto 20px;
+    border: none;
+  }
+}
+
+.section-o-clube {
+  padding-top: 80px;
+  border-bottom: 1px solid $gray-lighten;
+
+  .material-icons {
+    font-size: 100px;
+    color: $primary-color;
+    opacity: 0.5;
+  }
+  p {
+    margin: 0 20px;
+  }
+}
+
+.section-beneficiados {
+  background-color: $gray-lighten;
+
+  .row-beneficiado {
+    margin: 50px 0;
+
+    img {
+      -webkit-box-shadow: 2px 4px 5px -2px rgba(0,0,0,0.75);
+      -moz-box-shadow: 2px 4px 5px -2px rgba(0,0,0,0.75);
+      box-shadow: 2px 4px 5px -2px rgba(0,0,0,0.75);
+    }
+
+    h4 {
+      // border-left: 3px solid $primary-color;
+      padding-bottom: 5px;
+      font-weight: 700;
+    }
+
+    p {
+      // border-left: 2px solid $primary-color;
+      // padding: 10px
+    }
+  }
+}
+
+.section-parceiros {
+  background-color: $white;
+
+  .owl-carousel {
+    margin-top: 60px;
+  }
+
+  .item {
+
+    img {
+      width: 200px !important;
+    }
+  }
+}
+
+.section-associacao {
+  background-color: $secondary-color;
+  height: 500px;
+
+  .container {
+    background-color: $white;
+    height: 400px;
+    margin-top: 40px;
+  }
+}
