@@ -7,7 +7,7 @@ var gulpif = require("gulp-if");
 var uglify = require("gulp-uglify");
 var runSequence = require("gulp-run-sequence");
 var browserSync = require("browser-sync").create();
-var nodemon = require('gulp-nodemon');
+var nodemon = require("gulp-nodemon");
 
 var paths = {
   scss: ["./client/source/scss/**/*.scss"],
@@ -18,24 +18,24 @@ gulp.task("css", function () {
 
   return gulp.src(paths.scss)
     .pipe(sass({
-      outputStyle: 'compressed',
+      outputStyle: "compressed",
       errLogToConsole: true
     }))
     .pipe(autoprefixer({
-      browsers: ['last 3 versions'],
+      browsers: ["last 3 versions"],
       cascade: false
     }))
     .pipe(minifyCss({ keepSpecialComments: 0 }))
-    .pipe(rename({  dirname: '/css', extname: '.min.css' }))
-    .pipe(gulp.dest('./client/public/'));
+    .pipe(rename({  dirname: "/css", extname: ".min.css" }))
+    .pipe(gulp.dest("./client/public/"));
 
 });
 
 gulp.task("js", function () {
   return gulp.src(paths.js)
     .pipe(gulpif(true, uglify({ mangle: true })))
-    .pipe(rename({  dirname: '/js', extname: '.min.js' }))
-    .pipe(gulp.dest('./client/public/'));
+    .pipe(rename({  dirname: "/js", extname: ".min.js" }))
+    .pipe(gulp.dest("./client/public/"));
 });
 
 gulp.task("watch", function () {
@@ -69,7 +69,7 @@ gulp.task("browser-sync", function() {
   });
 });
 
-gulp.task('reload', function () { return browserSync.reload(); });
+gulp.task("reload", function () { return browserSync.reload(); });
 
 gulp.task("default", function (done) {
   process.env.NODE_ENV = "development";

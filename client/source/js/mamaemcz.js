@@ -14,10 +14,9 @@ $(document).ready(function() {
       // itemsDesktopSmall : false,https://www.cursosiag.com.br/lms/common/site/imgs/banners/banner_academia.jpg
       // itemsTablet: false,
       // itemsMobile : false
- 
   });
  
 });
 
 window.sr = ScrollReveal();
-sr.reveal('.foo', { duration: 1000 }, 50);
+sr.reveal(".foo", { duration: 1000 }, 50);

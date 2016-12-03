@@ -3,10 +3,10 @@ var app = express(); // Cria um aplicativo express
 
 // Configura template
 app.set("view engine", "jade");
-app.set('views', './client/views');
+app.set("views", "./client/views");
 
 // Define diretório dos arquivos estáticos
-app.use(express.static('client/public'));
+app.use(express.static("client/public"));
 
 // Configura porta do servidor
 app.set("port", parseInt(process.env.PORT) || 5000);
