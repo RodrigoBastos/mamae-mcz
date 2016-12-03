@@ -78,7 +78,7 @@ gulp.task("build", function (done) {
  */
 gulp.task("nodemon", function (cb) {
   var callbackCalled = false;
-  return nodemon({script: "app.js"}).on("start", function () {
+  return nodemon({script: "cluster_app.js"}).on("start", function () {
     if (!callbackCalled) {
       callbackCalled = true;
       cb();
