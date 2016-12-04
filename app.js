@@ -1,3 +1,4 @@
+var path = require("path");
 var express = require("express");
 
 //Rotas
@@ -12,9 +13,9 @@ function App () {
 
   return express()
     .set("view engine", "jade")
-    .set("views", "./client/views")
+    .set("views", path.join(__dirname, "client", "views"))
     .set("port", parseInt(process.env.PORT || 5000))
-    .use(express.static("client/public"))
+    .use(express.static(path.join(__dirname, "client", "public")))
     .use(mainRoutes);
 }
 
