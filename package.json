@@ -23,8 +23,10 @@
   },
   "homepage": "https://github.com/RodrigoBastos/mamae-mcz#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "jade": "^1.11.0",
+    "nodemailer": "^2.6.4",
     "scrollreveal": "^3.3.2",
     "serve-favicon": "^2.3.2"
   },
