@@ -164,18 +164,23 @@ html
                 li
                   | Blog
             .col-lg-6
-              form(name="formAssociacao", action="/")
+              form#formAssociacao(name="formAssociacao")
                 h3
                   | Faça parte agora mesmo do Clube Mamãe em Maceió.
                 .form-group
                   label
                     | Nome
-                  input.form-control(type="text")
+                  input.form-control#fieldName(type="text", name="name")
                 .form-group
                   label
                     | E-mail
-                  input.form-control(type="email")
-                button
+                  input.form-control#fieldEmail(type="email", name="email")
+                .form-group
+                  label
+                    | Telefone
+                  input.form-control#fieldPhone(type="text", name="phone")
+
+                button(onclick="return sendContact()")
                   .btn
                     | Associar agora
           

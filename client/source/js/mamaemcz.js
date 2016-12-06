@@ -20,3 +20,23 @@ $(document).ready(function() {
 
 window.sr = ScrollReveal();
 sr.reveal(".foo", { duration: 1000 }, 50);
+
+/**
+ * Envia email com o contato do novo membro
+ * @returns {boolean}
+ */
+function sendContact () {
+
+  $.ajax({
+    type: "POST",
+    url: "/contact",
+    data: $("#formAssociacao").serialize(),
+    success: success
+  });
+
+  function success (data) {
+    alert(data);
+  }
+
+  return false;
+}
