@@ -1,23 +1,28 @@
 var mailer =  require("../utils/mailer");
 var express = require("express");
+var config = require("../config");
 
 function sendContact (req, res) {
 
-  // Adiciona informações do contato no corpo do texto
-  mailer.mailOptions.text = mailer.mailOptions.text + "\n nome do futuro membro: "+req.query.name+"\n";
+  //ToDo - Será preciso validar os dados da requisição
 
-  // send mail with defined transport object
+  // Configura email
+  var mailOptions = {
+    from: config.mailerFrom,
+    to: config.mailerTo,
+    subject: config.mailerSubjectNewMember,
+    text: "Dados do novo membro: \n - nome: "+req.body.name+"\n - email: "+req.body.email+"\n - telefone: "+req.body.phone
+  };
+
+  // Envia email
   mailer.transporter.sendMail(mailer.mailOptions, function(error, info){
-    if(error){
-      return console.log(error);
-    }
-    console.log('Message sent: ' + info.response);
+    if(error) return res.sendStatus(400);
+    return res.sendStatus(200);
   });
 
 }
 
-
 module.exports = new express.Router()
-  .get("/contact", sendContact);
+  .post("/contact", sendContact);
 
 
