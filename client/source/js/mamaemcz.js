@@ -6,7 +6,7 @@ $(document).ready(function() {
       loop: true,
       autoplay:true,
       autoplayTimeout:4000,
-      dots: false
+      dots: true
  
       // "singleItem:true" is a shortcut for:
       // items : 1, 

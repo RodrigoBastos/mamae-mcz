@@ -17,7 +17,7 @@ function App () {
   return express()
     .set("view engine", "jade")
     .set("views", path.join(__dirname, "client", "views"))
-    .set("port", parseInt(process.env.PORT || 5000))
+    .set("port", parseInt(process.env.PORT || 3016))
     .use(express.static(path.join(__dirname, "client", "public")))
     .use(favicon(__dirname + "/client/public/images/logo.png"))
     .use(bodyParser.json())

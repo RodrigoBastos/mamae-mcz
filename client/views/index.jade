@@ -58,12 +58,12 @@ html
           div.col-lg-6.text-center
             a(href="#")
               img(src="images/logo.png")
-            ul.social-links
-              li
-                a(href="https://www.instagram.com/mamaeemmaceio/", target="_blank")
-                  i.fa.fa-3x.fa-instagram(aria-hidden="true")
-                  span
-                    | @mamaeemmaceio
+            //- ul.social-links
+            //-   li
+            //-     a(href="https://www.instagram.com/mamaeemmaceio/", target="_blank")
+            //-       i.fa.fa-3x.fa-instagram(aria-hidden="true")
+            //-       span
+            //-         | @mamaeemmaceio
 
       section.section.section-o-clube
         .container
@@ -96,7 +96,7 @@ html
         .container
           .row
             .col-lg-12
-              h2.text-center
+              h3.text-center
                 | Beneficiados
               hr
           .row.row-beneficiado
@@ -118,70 +118,70 @@ html
             .col-lg-6
               a(href="#")
                 img(src="images/lar-1.jpg", alt="")
-          .row.text-center
-            button.btn-carregar-mais
-              | Ver mais
+          
+          //- .row.text-center
+          //-   button.btn-carregar-mais
+          //-     | Ver mais
 
       section.section.section-parceiros
         .container
           .row
             .col-lg-12
-              h2.text-center
+              h3.text-center
                 | Parceiros
               hr
 
               #owl-demo.owl-carousel.owl-theme
-                .item
-                  img(src="images/parceiro-1.png")
-                .item
-                  img(src="images/logo-1.jpg")
-                .item
-                  img(src="images/logo-2.jpg")
-                .item
-                  img(src="images/logo-3.jpg")
-                .item
-                  img(src="images/logo-4.jpg")
-                .item
-                  img(src="images/logo-5.jpg")
+                a.item(href="#", target="_blank")
+                  img(src="images/parceiros/amarilio.png")
+                a.item(href="#", target="_blank")
+                  img(src="images/parceiros/casa-magica.png")
+                a.item(href="#", target="_blank")
+                  img(src="images/parceiros/gravida-chic.png")
+                a.item(href="#", target="_blank")
+                  img(src="images/parceiros/hora-do-recreio.png")
+                a.item(href="#", target="_blank")
+                  img(src="images/parceiros/ostudio.png")
+                a.item(href="#", target="_blank")
+                  img(src="images/parceiros/tip-top.png")
               
       section.section.section-associacao
         .container
           .row
-            .col-lg-6
+            .col-lg-6.col-md-6
               ul
                 li
-                  | O clube
+                  | Lorem ipsum dolor sit amet, consectetur adipisicing elit
                 li
-                  | Beneficiados
+                  | Lorem ipsum dolor sit.
                 li
-                  | Parceiros
+                  | Lorem ipsum dolor sit amet
                 li
-                  | Associe-se
+                  | Lorem ipsum
                 li
-                  | A História
+                  | Lorem ipsum dolor sit amet, consectetur
                 li
-                  | Contato
+                  | Lorem ipsum dolor sit amet
                 li
-                  | Blog
-            .col-lg-6
+                  | Lorem ipsum dolor sit am
+            .col-lg-6.col-md-6
               form#formAssociacao(name="formAssociacao")
                 h3
-                  | Faça parte agora mesmo do Clube Mamãe em Maceió.
+                  | Faça parte agora mesmo do Clube Mamãe em Maceió
                 .form-group
                   label
-                    | Nome
-                  input.form-control#fieldName(type="text", name="name")
+                    | Nome*
+                  input.form-control#fieldName(type="text", name="name", placeholder="Digite seu nome completo")
                 .form-group
                   label
-                    | E-mail
-                  input.form-control#fieldEmail(type="email", name="email")
+                    | E-mail*
+                  input.form-control#fieldEmail(type="email", name="email", placeholder="Ex.: nome@email.com")
                 .form-group
                   label
                     | Telefone
-                  input.form-control#fieldPhone(type="text", name="phone")
+                  input.form-control#fieldPhone(type="text", name="phone", placeholder="(00) 00000-0000")
 
-                button(onclick="return sendContact()")
-                  .btn
+                button(onclick="return sendContact()").btn-slider-cta
                     | Associar agora
           
         script(src="https://code.jquery.com/jquery-3.1.1.min.js", integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin="anonymous")

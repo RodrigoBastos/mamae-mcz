@@ -93,8 +93,8 @@ gulp.task("browser-sync", function() {
   browserSync.init(null, {
     proxy: "http://localhost:5000",
     baseDir: "./client/public",
-    browser: "google chrome",
-    port: 7000
+    browser: "chrome",
+    port: 5000
   });
 });
 
