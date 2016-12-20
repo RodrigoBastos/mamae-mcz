@@ -13,10 +13,16 @@ var autoprefixer = require("gulp-autoprefixer");
 // Sicroniza navegador
 var browserSync = require("browser-sync").create();
 
-// Direórios dos arquivos estáticos
-var paths = {
+
+var watchPaths = {
   scss: ["./client/source/scss/**/*.scss"],
   js: ["./client/source/js/**/*.js"]
+};
+
+// Direórios dos arquivos estáticos
+var paths = {
+  scss: ["./client/source/scss/*.scss"],
+  js: ["./client/source/js/*.js"]
 };
 
 /***
@@ -54,8 +60,8 @@ gulp.task("js", function () {
  * e um para javascript
  */
 gulp.task("watch", function () {
-  gulp.watch(paths.scss, ["watch-css"]);
-  gulp.watch(paths.js, ["watch-js"]);
+  gulp.watch(watchPaths.scss, ["watch-css"]);
+  gulp.watch(watchPaths.js, ["watch-js"]);
 });
 
 /**
