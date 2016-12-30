@@ -15,7 +15,7 @@ function sendContact (req, res) {
   };
 
   // Envia email
-  mailer.transporter.sendMail(mailer.mailOptions, function(error, info){
+  mailer.transporter.sendMail(mailOptions, function(error, info){
     if(error) return res.sendStatus(400);
     return res.sendStatus(200);
   });
