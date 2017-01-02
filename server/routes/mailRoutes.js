@@ -4,7 +4,7 @@ var config = require("../config");
 
 function sendContact (req, res) {
 
-  //ToDo - Será preciso validar os dados da requisição
+  if (!req.body.name || !req.body.email) return res.sendStatus(406);
 
   // Configura email
   var mailOptions = {
