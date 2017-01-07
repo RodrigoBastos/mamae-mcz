@@ -29,6 +29,8 @@ h3 {
   transition: .2s;
 
   &:hover {
+    color: $white;
+    text-decoration: none;
     background-color: $cta-dark-color;
   }
 }
@@ -52,22 +54,49 @@ h3 {
 .navbar-default {
   background-color: #fff !important;
   margin-bottom: 0 !important;
+  min-height: 60px !important;
+  -webkit-box-shadow: 1px 1px 6px -1px rgba(0,0,0,0.25);
+  -moz-box-shadow: 1px 1px 6px -1px rgba(0,0,0,0.25);
+  box-shadow: 1px 1px 6px -1px rgba(0,0,0,0.25);
 }
 
 .navbar-brand {
   padding: 10px !important;
 
   img {
-    height: 30px;
+        height: 39px;
+  }
+}
+
+.navbar-right {
+  a {
+    line-height: 30px !important;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+
+    &:hover {
+        color: $primary-dark-color !important; 
+        border-bottom-color: $primary-dark-color; 
+    }
+  }
+
+  .instagram-link {
+    padding: 10px 18px;
+    margin: 6px;
+
+    &:hover {
+      border-bottom-color: transparent; 
+    }
   }
 }
 
 .slider {
   background-size: cover;
-  padding-top: 100px;
+  padding-top: 180px;
+  padding-bottom: 8px;
   background-position-y: -90px;
   width: 100%;
-  background: url("../images/slider-bg.jpg") no-repeat fixed;
+  background: url("../images/slider-bg.jpg") no-repeat;
 
   h1 {
     color: $white;
@@ -140,7 +169,7 @@ h3 {
   background-color: $gray-lighten;
 
   .row-beneficiado {
-    margin: 50px 0;
+    margin: 5px 0 40px;
 
     img {
       -webkit-box-shadow: 2px 4px 5px -2px rgba(0,0,0,0.75);
@@ -181,21 +210,25 @@ h3 {
 }
 
 .section-associacao {
-  // background-color: $secondary-color;
+  background-color: rgba(241, 90, 178, 0.64);
 
-  background: $secondary-color; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient($primary-color, rgba(241,90, 178, 0.7)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient($primary-color, rgba(241,90, 178, 0.7)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient($primary-color, rgba(241,90, 178, 0.7)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient($primary-color, rgba(241,90, 178, 0.7)); /* Standard syntax */
-  padding-bottom: 50px;
+  // background: $secondary-color; /* For browsers that do not support gradients */
+  //   background: -webkit-linear-gradient($primary-color, rgba(241,90, 178, 0.7)); /* For Safari 5.1 to 6.0 */
+  //   background: -o-linear-gradient($primary-color, rgba(241,90, 178, 0.7)); /* For Opera 11.1 to 12.0 */
+  //   background: -moz-linear-gradient($primary-color, rgba(241,90, 178, 0.7)); /* For Firefox 3.6 to 15 */
+  //   background: linear-gradient($primary-color, rgba(241,90, 178, 0.7)); /* Standard syntax */
+  padding: 45px 0 80px;
     
   .container {
     color: #fff;
     margin-top: 40px;
-    background-color: rgba(31, 30, 30, 0.16);
+    background-color: rgba(31, 30, 30, 0.10);
     padding: 31px;
     box-shadow: 1px 0px 9px 0 rgba(0,0,0,.3);
+
+    h1 {
+        margin-bottom: 25px;
+    }
 
     ul {
         padding: 40px 70px;
@@ -232,6 +265,28 @@ h3 {
           width: 100%;
       }
   }
+}
+
+.section-rodape {
+  padding: 20px 0;
+  background-color: $secondary-color;
+  
+  a, .copyright {
+    color: $white;
+  }
+
+  .fa {
+    margin: 0 10px 0 26px;
+    position: relative;
+    top: 4px;
+  }
+
+  .copyright {
+    position: relative;
+    top: 10px;
+    font-size: 12px;
+  }
+
 }
 
 .build-container {

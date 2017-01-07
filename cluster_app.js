@@ -3,15 +3,15 @@ var numCPUs = require("os").cpus().length;
 
 if (cluster.isMaster) {
 
-  // Fork Workers
-  for (var i = 0; i < numCPUs; i++) {
-    cluster.fork();
-  }
+  // // Fork Workers
+  // for (var i = 0; i < numCPUs; i++) {
+  //   cluster.fork();
+  // }
 
-  cluster.on("exit", function (worker) {
-    console.log("Cluster number " + worker.id + " died :(. Respawning...");
-    cluster.fork();
-  });
+  // cluster.on("exit", function (worker) {
+  //   console.log("Cluster number " + worker.id + " died :(. Respawning...");
+  //   cluster.fork();
+  // });
 } else {
 
   // Aplicativo express
