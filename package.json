@@ -1,10 +1,10 @@
 {
   "name": "mamae-mcz",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Website do Clube Mamãe Maceió",
-  "main": "app.js",
+  "main": " cluster_app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node cluster_app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
