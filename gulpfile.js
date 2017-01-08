@@ -100,7 +100,7 @@ gulp.task("browser-sync", function() {
     proxy: "http://localhost:5000",
     baseDir: "./client/public",
     browser: "chrome",
-    port: 5000
+    port: 7000
   });
 });
 
