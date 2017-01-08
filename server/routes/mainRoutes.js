@@ -15,5 +15,8 @@ function getIndex (req, res) {
   res.render("build");
 }
 
+function getPreview (req, res) { res.render("index"); }
+
 module.exports = new express.Router()
-  .get("/", getIndex);
+  .get("/", getIndex)
+  .get("/preview", getPreview);
