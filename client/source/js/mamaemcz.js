@@ -1,15 +1,13 @@
 $(document).ready(function() {
- 
-   $("#owl-demo").owlCarousel({
- 
-      items: 4,
-      loop: true,
-      autoplay:true,
-      autoplayTimeout:4000,
-      dots: true
+  $("#owl-demo").owlCarousel({
+    items: 4,
+    loop: true,
+    autoplay:true,
+    autoplayTimeout:4000,
+    dots: true
   });
 
-   $('a[href*="#"]:not([href="#"])').click(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -21,7 +19,6 @@ $(document).ready(function() {
       }
     }
   });
- 
 });
 
 window.sr = ScrollReveal();
@@ -37,12 +34,8 @@ function sendContact () {
     type: "POST",
     url: "/contact",
     data: $("#formAssociacao").serialize(),
-    success: success
+    success: function (data) { alert(data); }
   });
-
-  function success (data) {
-    alert(data);
-  }
-
+  
   return false;
 }
