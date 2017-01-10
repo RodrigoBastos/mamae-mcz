@@ -1,4 +1,4 @@
-var express = require("express");
+var express = require('express');
 
 /**
  * Página inicial do site
@@ -9,14 +9,14 @@ var express = require("express");
 function getIndex (req, res) {
 
   // Em desenvolvimento, renderize a página index
-  if (process.env.NODE_ENV == "development") return res.render("index");
+  if (process.env.NODE_ENV == 'development') return res.render('index');
 
   // Em produção, renderize a página em construção
-  res.render("build");
+  res.render('build');
 }
 
-function getPreview (req, res) { res.render("index"); }
+function getPreview (req, res) { res.render('index'); }
 
 module.exports = new express.Router()
-  .get("/", getIndex)
-  .get("/preview", getPreview);
+  .get('/', getIndex)
+  .get('/preview', getPreview);
