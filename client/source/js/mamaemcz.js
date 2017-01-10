@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  //ToDo - Comentar código
   $("#owl-demo").owlCarousel({
     items: 4,
     loop: true,
@@ -7,8 +8,9 @@ $(document).ready(function() {
     dots: true
   });
 
+  //ToDo - Comentar código
   $('a[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
       if (target.length) {
@@ -21,6 +23,7 @@ $(document).ready(function() {
   });
 });
 
+//ToDo - Comentar código
 window.sr = ScrollReveal();
 sr.reveal(".foo", { duration: 1000 }, 50);
 
@@ -36,6 +39,6 @@ function sendContact () {
     data: $("#formAssociacao").serialize(),
     success: function (data) { alert(data); }
   });
-  
+
   return false;
 }
