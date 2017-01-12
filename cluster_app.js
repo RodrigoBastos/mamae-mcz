@@ -2,9 +2,8 @@ var cluster = require('cluster');
 var numCPUs = require('os').cpus().length;
 
 if (cluster.isMaster) {
-
   // Fork Workers
-  for (var i = 0; i < numCPUs; i++) {
+  for (var i = 0; i < numCPUs; i += 1) {
     cluster.fork();
   }
 
@@ -13,7 +12,7 @@ if (cluster.isMaster) {
     cluster.fork();
   });
 } else {
-
+  /* eslint-disable global-require */
   // Aplicativo express
   var App = require('./app');
   var app = new App();
@@ -25,5 +24,4 @@ if (cluster.isMaster) {
     'Express cluster number ' + cluster.worker.id +
     ' listening on port ' + app.get('port') +
     ' in ' + app.get('env') + ' mode');
-
 }
