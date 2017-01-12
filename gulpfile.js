@@ -1,4 +1,4 @@
-var gulp =  require('gulp');
+var gulp = require('gulp');
 
 // Plugins gulp
 var sass = require('gulp-sass');
@@ -24,11 +24,8 @@ var paths = {
   js: ['./client/source/js/*.js']
 };
 
-/***
- * Tarefa de manipulação dos arquivos css
- */
+// Tarefa de manipulação dos arquivos css
 gulp.task('css', function () {
-
   return gulp.src(paths.scss)
     .pipe(sass({
       outputStyle: 'compressed',
@@ -39,9 +36,8 @@ gulp.task('css', function () {
       cascade: false
     }))
     .pipe(minifyCss({ keepSpecialComments: 0 }))
-    .pipe(rename({  dirname: '/css', extname: '.min.css' }))
+    .pipe(rename({ dirname: '/css', extname: '.min.css' }))
     .pipe(gulp.dest('./client/public/'));
-
 });
 
 /**
@@ -50,40 +46,29 @@ gulp.task('css', function () {
 gulp.task('js', function () {
   return gulp.src(paths.js)
     .pipe(gulpif(true, uglify({ mangle: true })))
-    .pipe(rename({  dirname: '/js', extname: '.min.js' }))
+    .pipe(rename({ dirname: '/js', extname: '.min.js' }))
     .pipe(gulp.dest('./client/public/'));
 });
 
-/**
- * Cria um watch para os arquivos css
- * e um para javascript
- */
+// Cria um watch para os arquivos css e um para javascript
 gulp.task('watch', function () {
   gulp.watch(watchPaths.scss, ['watch-css']);
   gulp.watch(watchPaths.js, ['watch-js']);
 });
 
-/**
- * Tarefas executadas pelos watchers,
- * após alterações dos arquivos css e javascript
- */
+// Tarefas executadas pelos watchers, após alterações dos arquivos css e javascript
 gulp.task('watch-js', function (done) { runSequence('js', 'reload', done); });
 gulp.task('watch-css', function (done) { runSequence('css', 'reload', done); });
 
-
-/**
- * Tarefa que executa as tarefas js e css em sequência
- */
+// Tarefa que executa as tarefas js e css em sequência
 gulp.task('build', function (done) {
   return runSequence('js', 'css', done);
 });
 
-/**
- * Tarefa que executa a aplicação via nodemon
- */
+// Tarefa que executa a aplicação via nodemon
 gulp.task('nodemon', function (cb) {
   var callbackCalled = false;
-  return nodemon({script: 'cluster_app.js'}).on('start', function () {
+  return nodemon({ script: 'cluster_app.js' }).on('start', function () {
     if (!callbackCalled) {
       callbackCalled = true;
       cb();
@@ -91,10 +76,8 @@ gulp.task('nodemon', function (cb) {
   });
 });
 
-/**
- * Tarefa que realiza a sicronização com o browser
- */
-gulp.task('browser-sync', function() {
+// Tarefa que realiza a sicronização com o browser
+gulp.task('browser-sync', function () {
   browserSync.init(null, {
     proxy: 'http://localhost:5000',
     baseDir: './client/public',
@@ -103,14 +86,10 @@ gulp.task('browser-sync', function() {
   });
 });
 
-/**
- * Tarefa que recarregar o browser após as alterações dos arquivos
- */
+// Tarefa que recarregar o browser após as alterações dos arquivos
 gulp.task('reload', function () { return browserSync.reload(); });
 
-/**
- * Tarefa principal
- */
+// Tarefa principal
 gulp.task('default', function (done) {
   process.env.NODE_ENV = 'development';
   runSequence('build', 'browser-sync', 'nodemon', 'watch', done);
