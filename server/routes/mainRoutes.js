@@ -6,16 +6,16 @@ var express = require('express');
  * @param res
  * @returns {String}
  */
-function getIndex (req, res) {
+function getIndex(req, res) {
 
   // Em desenvolvimento, renderize a página index
-  if (process.env.NODE_ENV == 'development') return res.render('index');
+  if (process.env.NODE_ENV === 'development') return res.render('index');
 
   // Em produção, renderize a página em construção
   res.render('build');
 }
 
-function getPreview (req, res) { res.render('index'); }
+function getPreview(req, res) { res.render('index'); }
 
 module.exports = new express.Router()
   .get('/', getIndex)
