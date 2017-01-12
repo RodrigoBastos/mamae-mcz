@@ -1,6 +1,6 @@
 {
   "name": "mamae-mcz",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Website do Clube Mamãe Maceió",
   "main": " cluster_app.js",
   "scripts": {
@@ -34,7 +34,7 @@
     "browser-sync": "^2.17.6",
     "eslint": "^3.5.0",
     "eslint-config-airbnb-base": "^7.1.0",
-    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-import": "^1.14.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-if": "^2.0.2",
